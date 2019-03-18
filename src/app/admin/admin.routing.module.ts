@@ -3,10 +3,13 @@ import { Routes, RouterModule } from "@angular/router";
 import { AdminComponent, DashboardComponent, UserComponent, RightComponent } from "./pages";
 
 const routes: Routes = [
-    { path: '', component: AdminComponent },
-    { path: 'dashboard', component: DashboardComponent },
-    { path: 'user', component: UserComponent },
-    { path: 'rights', component: RightComponent }
+    {
+        path: '', component: AdminComponent, children: [
+            { path: 'dashboard', component: DashboardComponent },
+            { path: 'user', component: UserComponent },
+            { path: 'rights', component: RightComponent }
+        ]
+    }
 ];
 
 @NgModule({
