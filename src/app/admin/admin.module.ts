@@ -7,4 +7,4 @@ import { UserComponent, RightComponent, DashboardComponent, AdminComponent } fro
     declarations: [UserComponent, RightComponent, DashboardComponent, AdminComponent],
     imports: [AdminRoutingModule]
 })
-export class AdminModule { constructor() { alert('admin') } }
+export class AdminModule {}
